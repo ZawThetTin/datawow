@@ -1,3 +1,5 @@
+import './Todo.scss';
+
 export const Todo = () => {
-	return <div>Todo</div>;
+	return <div className='todo'>Todo</div>;
 };

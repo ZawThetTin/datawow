@@ -1,3 +1,5 @@
+import './Progress.scss';
+
 export const Progress = () => {
-	return <div>Progress</div>;
+	return <div className='progress'>Progress</div>;
 };

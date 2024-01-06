@@ -1,3 +1,5 @@
+import './Dropdown.scss';
+
 export const Dropdown = () => {
-	return <div>Dropdown</div>;
+	return <div className='dropdown'>Dropdown</div>;
 };
