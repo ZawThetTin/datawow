@@ -1,3 +1,11 @@
+import { Todo } from '.';
+
 export const ListTodos = () => {
-	return <div>ListTodos</div>;
+	return (
+		<div>
+			<Todo />
+			<Todo />
+			<Todo />
+		</div>
+	);
 };
