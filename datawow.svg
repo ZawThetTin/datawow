@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" ariaHidden="true" role="img" width="205" height="32" preserveAspectRatio="xMidYMid meet" fill="currentColor" viewBox="0 0 205 32">
-	<g fill="none" fillRule="evenodd">
-		<path fill="#4A4A4A" d="M26.331 31.237h3.95V18.51h-3.95zM26.331 15.438h3.95V.956h-3.95zM17.554 31.237h3.95v-19.31h-3.95z"></path>
-		<path fill="#46D7CE" d="M17.554 8.856h3.95v-7.9h-3.95zM8.777 31.237h3.95v-7.46h-3.95z"></path>
-		<path fill="#4A4A4A" d="M8.777 20.705h3.95V.956h-3.95zM0 31.237h3.95V.957H0z"></path>
+<svg xmlns='http://www.w3.org/2000/svg'
+	xmlnsXlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='30.28' height='30.27' preserveAspectRatio='xMidYMid meet' fill='currentColor' viewBox='0 0 30.28 30.27'>
+	<g fill='none' fillRule='evenodd'>
+		<path fill='#4A4A4A' d='M26.331 31.237h3.95V18.51h-3.95zM26.331 15.438h3.95V.956h-3.95zM17.554 31.237h3.95v-19.31h-3.95z'></path>
+		<path fill='#46D7CE' d='M17.554 8.856h3.95v-7.9h-3.95zM8.777 31.237h3.95v-7.46h-3.95z'></path>
+		<path fill='#4A4A4A' d='M8.777 20.705h3.95V.956h-3.95zM0 31.237h3.95V.957H0z'></path>
 	</g>
 </svg>
