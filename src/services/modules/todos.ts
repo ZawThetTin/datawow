@@ -5,10 +5,10 @@ import { Todo } from '../../types/todos.types';
 
 export const todosApi = api.injectEndpoints({
 	endpoints: build => ({
-		getClinics: build.query<Todo[], string>({
-			query: userId => {
+		getTodos: build.query<Todo[], string>({
+			query: () => {
 				return {
-					url: `${TODOS_ENDPOINT}?userId=${userId}`,
+					url: `${TODOS_ENDPOINT}`,
 					method: 'GET',
 				};
 			},
@@ -18,4 +18,4 @@ export const todosApi = api.injectEndpoints({
 	overrideExisting: false,
 });
 
-export const { useGetClinicsQuery } = todosApi;
+export const { useGetTodosQuery } = todosApi;

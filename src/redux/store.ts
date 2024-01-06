@@ -1,6 +1,6 @@
 import * as modules from '../services/modules';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { setupListeners } from '@reduxjs/toolkit/dist/query';
+import { setupListeners } from '@reduxjs/toolkit/query';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 

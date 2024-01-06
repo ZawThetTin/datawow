@@ -17,7 +17,7 @@ const baseQuery = (): CustomBaseQuery => async requestOpts => {
 		const result = await axios({
 			...requestOpts,
 		});
-		return { data: result.data.data };
+		return { data: result.data };
 	} catch (error) {
 		const axiosError = error as AxiosError;
 		return { error: axiosError.response || axiosError };
