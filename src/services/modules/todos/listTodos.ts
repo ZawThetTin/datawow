@@ -3,7 +3,7 @@ import { TODOS_ENDPOINT } from '@/services/endpoints';
 import { TODO_TAG } from '@/services/tags';
 import { Todo } from '@/types/todos.types';
 
-export const todosApi = api.injectEndpoints({
+export const listTodosApi = api.injectEndpoints({
 	endpoints: build => ({
 		getTodos: build.query<Todo[], string>({
 			query: () => {
@@ -18,4 +18,4 @@ export const todosApi = api.injectEndpoints({
 	overrideExisting: false,
 });
 
-export const { useGetTodosQuery } = todosApi;
+export const { useGetTodosQuery } = listTodosApi;
