@@ -1,4 +1,4 @@
-import { AddTodo, Dropdown, ListTodos, Progress } from './components';
+import { AddTodo, Dropdown, ListTodos, Progress } from '@/components';
 
 function App() {
 	return (

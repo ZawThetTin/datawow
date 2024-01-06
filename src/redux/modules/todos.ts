@@ -1,6 +1,6 @@
+import { RootState } from '@/redux/store';
+import { Todo } from '@/types/todos.types';
 import { createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
-import { Todo } from '../../types/todos.types';
 
 interface InitialState {
 	todos: Todo[];

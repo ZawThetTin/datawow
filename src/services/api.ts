@@ -1,12 +1,13 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import { customBaseQuery } from './customBaseQuery';
+import { customBaseQuery } from '@/services/customBaseQuery';
+
 import * as tags from './tags';
 
 export const api = createApi({
 	baseQuery: customBaseQuery,
 	tagTypes: Object.values(tags),
-	endpoints: () => ({})
+	endpoints: () => ({}),
 });
 
 export const resetApiState = api.util.resetApiState;

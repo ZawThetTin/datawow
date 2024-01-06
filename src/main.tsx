@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import './main.scss';
 import axios from 'axios';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistor, store } from './redux/store.ts';
+
+import { persistor, store } from '@/redux/store.ts';
+import App from '@/App';
+
+import './main.scss';
 
 axios.defaults.baseURL = import.meta.env.VITE_API;
 

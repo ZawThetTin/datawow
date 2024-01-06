@@ -1,7 +1,7 @@
-import { api } from '../api';
-import { TODOS_ENDPOINT } from '../endpoints';
-import { TODO_TAG } from '../tags';
-import { Todo } from '../../types/todos.types';
+import { api } from '@/services/api';
+import { TODOS_ENDPOINT } from '@/services/endpoints';
+import { TODO_TAG } from '@/services/tags';
+import { Todo } from '@/types/todos.types';
 
 export const todosApi = api.injectEndpoints({
 	endpoints: build => ({

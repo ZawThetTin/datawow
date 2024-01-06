@@ -1,11 +1,11 @@
-import * as modules from '../services/modules';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { TODOS_SLICE, todosReducer } from './modules';
-import { api } from '../services/api';
+import { TODOS_SLICE, todosReducer } from '@/redux/modules';
+import { api } from '@/services/api';
+import * as modules from '@/services/modules';
 
 const persistConfig = {
 	key: 'datawow',
