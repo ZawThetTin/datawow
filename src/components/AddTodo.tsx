@@ -6,6 +6,7 @@ import {
 } from '@/services/modules/todos';
 
 import './AddTodo.scss';
+import { Input } from '@/components/Input';
 
 export const AddTodo = () => {
 	const { refetch } = useGetTodosQuery('');
@@ -30,13 +31,7 @@ export const AddTodo = () => {
 
 	return (
 		<form ref={formRef} onSubmit={handleAddTodo}>
-			<input
-				type='text'
-				className='add-todo-input'
-				value={title}
-				onChange={handleChangeTitle}
-				placeholder='Add your todo...'
-			/>
+			<Input onChange={handleChangeTitle} value={title} showSubmitBtn={false} />
 		</form>
 	);
 };

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, FormEvent, useEffect, useRef, useState } from 'react';
 import './TodoItem.scss';
 import { Todo, Todo as TodoTypes } from '@/types/todos.types';
 import {
@@ -10,6 +10,7 @@ import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline';
 import { Dropdown } from '@/components/Dropdown';
 import { Checkbox } from '@/components/Checkbox';
 import { cn } from '@/utils';
+import { Input } from '@/components/Input';
 
 interface Props {
 	data: TodoTypes;
@@ -21,6 +22,9 @@ export const TodoItem: FC<Props> = ({ data }) => {
 	const [deleteTodo] = useDeleteTodoMutation();
 	const [checked, setChecked] = useState(data?.completed || false);
 	const [showActions, setShowAcitons] = useState(false);
+	const [editId, setEditId] = useState<string | null>(null);
+	const [title, setTitle] = useState(data.title);
+	const formRef = useRef<HTMLFormElement>(null);
 
 	const handleCheckToggle = async () => {
 		setChecked(prevValue => !prevValue);
@@ -32,14 +36,27 @@ export const TodoItem: FC<Props> = ({ data }) => {
 		refetch();
 	};
 
-	const handleEdit = async (todo: TodoTypes) => {
-		const newTodo = {
-			...todo,
-			title: 'Updated',
-			completed: checked,
-		};
-		await updateTodo(newTodo);
+	const handleChangeTitle = (e: FormEvent<HTMLInputElement>) => {
+		setTitle(e.currentTarget.value);
+	};
+
+	const handleBlur = () => {
+		setEditId(null);
+	};
+
+	const handleSubmitEdit = async (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		await updateTodo({
+			...data,
+			title,
+		});
 		refetch();
+		setEditId(null);
+	};
+
+	const handleEdit = async (todo: TodoTypes) => {
+		setShowAcitons(false);
+		setEditId(todo.id);
 	};
 
 	const handleDelete = async (id: string) => {
@@ -50,6 +67,18 @@ export const TodoItem: FC<Props> = ({ data }) => {
 	useEffect(() => {
 		setChecked(data?.completed || false);
 	}, [data]);
+
+	if (data?.id === editId)
+		return (
+			<form ref={formRef} onSubmit={handleSubmitEdit}>
+				<Input
+					onChange={handleChangeTitle}
+					value={title}
+					autofocus
+					onBlur={handleBlur}
+				/>
+			</form>
+		);
 
 	return (
 		<div className='todo'>

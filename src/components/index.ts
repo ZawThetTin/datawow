@@ -4,3 +4,4 @@ export * from './Progress';
 export * from './AddTodo';
 export * from './Dropdown';
 export * from './FilterTodo';
+export * from './Input';

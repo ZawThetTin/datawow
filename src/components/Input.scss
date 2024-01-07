@@ -1,0 +1,49 @@
+.input-wrapper {
+	padding-block: 5px;
+	padding-inline: 6px;
+	border-radius: 9999px;
+	border: 1px solid transparent;
+	outline-color: var(--theme-primary);
+	background-color: white;
+	display: flex;
+
+	&:focus-within {
+		border: 1px solid var(--theme-primary);
+
+		.submit-btn {
+			opacity: 1;
+		}
+	}
+
+	.input {
+		width: 100%;
+		font-size: 16px;
+		padding-inline: 14px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+
+		&::placeholder {
+			color: #bcbcbc;
+		}
+	}
+
+	.submit-btn {
+		background-color: var(--theme-primary);
+		padding-block: 10px;
+		padding-inline: 17px;
+		border-radius: 999px;
+		color: white;
+		opacity: 0;
+
+		&:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		&.hidden {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
