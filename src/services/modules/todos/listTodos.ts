@@ -8,14 +8,13 @@ export const listTodosApi = api.injectEndpoints({
 		getTodos: build.query<Todo[], string>({
 			query: () => {
 				return {
-					url: `${TODOS_ENDPOINT}`,
+					url: TODOS_ENDPOINT,
 					method: 'GET',
 				};
 			},
 			providesTags: [TODOS_LIST_TAG],
 		}),
 	}),
-	overrideExisting: false,
 });
 
 export const { useGetTodosQuery } = listTodosApi;

@@ -3,6 +3,7 @@ import './TodoItem.scss';
 import { Todo, Todo as TodoTypes } from '@/types/todos.types';
 import {
 	useDeleteTodoMutation,
+	useGetTodosQuery,
 	useUpdateTodoMutation,
 } from '@/services/modules/todos';
 import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline';
@@ -15,6 +16,7 @@ interface Props {
 }
 
 export const TodoItem: FC<Props> = ({ data }) => {
+	const { refetch } = useGetTodosQuery('');
 	const [updateTodo] = useUpdateTodoMutation();
 	const [deleteTodo] = useDeleteTodoMutation();
 	const [checked, setChecked] = useState(data?.completed || false);
@@ -27,19 +29,22 @@ export const TodoItem: FC<Props> = ({ data }) => {
 			completed: !checked,
 		};
 		await updateTodo(newTodo);
+		refetch();
 	};
 
-	const handleEdit = (todo: TodoTypes) => {
+	const handleEdit = async (todo: TodoTypes) => {
 		const newTodo = {
 			...todo,
 			title: 'Updated',
 			completed: checked,
 		};
-		updateTodo(newTodo);
+		await updateTodo(newTodo);
+		refetch();
 	};
 
-	const handleDelete = (id: string) => {
-		deleteTodo(id);
+	const handleDelete = async (id: string) => {
+		await deleteTodo(id);
+		refetch();
 	};
 
 	useEffect(() => {

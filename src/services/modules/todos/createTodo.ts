@@ -16,7 +16,6 @@ export const createTodoApi = api.injectEndpoints({
 			invalidatesTags: [TODOS_LIST_TAG],
 		}),
 	}),
-	overrideExisting: false,
 });
 
 export const { useCreateTodoMutation } = createTodoApi;

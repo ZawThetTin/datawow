@@ -15,7 +15,6 @@ export const todoDetailsApi = api.injectEndpoints({
 			providesTags: [TODO_DETAILS_TAG],
 		}),
 	}),
-	overrideExisting: false,
 });
 
 export const { useGetTodoDetailsQuery } = todoDetailsApi;

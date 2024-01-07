@@ -1,4 +1,4 @@
-import { AddTodo, ListTodos, Progress } from '@/components';
+import { ListTodos, Progress } from '@/components';
 import './Todo.scss';
 
 export const Todo = () => {
@@ -6,8 +6,6 @@ export const Todo = () => {
 		<div className='todo-container'>
 			<Progress />
 			<ListTodos />
-			{/* <Dropdown /> */}
-			<AddTodo />
 		</div>
 	);
 };

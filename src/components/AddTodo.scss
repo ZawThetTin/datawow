@@ -1,3 +1,13 @@
-.add-todo {
-	color: red;
+.add-todo-input {
+	padding-block: 14px;
+	padding-inline: 20px;
+	width: 100%;
+	border-radius: 9999px;
+	border: none;
+	outline-color: var(--theme-primary);
+	font-size: 16px;
+
+	&::placeholder {
+		color: #bcbcbc;
+	}
 }

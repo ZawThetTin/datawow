@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FilterTodo, TodoItem } from '.';
+import { AddTodo, FilterTodo, TodoItem } from '.';
 import { useGetTodosQuery } from '../services/modules/todos';
 import { Todo } from '@/types/todos.types';
 import { useSelector } from 'react-redux';
@@ -27,6 +27,7 @@ export const ListTodos = () => {
 			{todos?.map(item => {
 				return <TodoItem key={item.id} data={item} />;
 			})}
+			<AddTodo />
 		</div>
 	);
 };
