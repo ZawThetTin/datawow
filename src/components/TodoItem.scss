@@ -20,6 +20,12 @@
 	white-space: nowrap;
 }
 
+.edit-todo-btn,
+.delete-todo-btn {
+	width: 100%;
+	text-align: left;
+}
+
 .delete-todo-btn {
 	color: var(--error);
 }

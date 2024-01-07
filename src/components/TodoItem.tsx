@@ -67,7 +67,9 @@ export const TodoItem: FC<Props> = ({ data }) => {
 						<EllipsisHorizontalIcon width={24} />
 					</button>
 				}>
-				<button onClick={() => handleEdit(data)}>Edit</button>
+				<button className='edit-todo-btn' onClick={() => handleEdit(data)}>
+					Edit
+				</button>
 				<button
 					className='delete-todo-btn'
 					onClick={() => handleDelete(data.id)}>
