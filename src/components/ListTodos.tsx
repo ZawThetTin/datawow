@@ -8,15 +8,13 @@ export const ListTodos = () => {
 
 	useEffect(() => {
 		refetch();
-		console.log({ data });
 	}, [refetch, data]);
 
 	return (
 		<div className='todo-list'>
-			{JSON.stringify(data)}
-			<Todo />
-			<Todo />
-			<Todo />
+			{data?.map(item => {
+				return <Todo key={item.id} data={item} />;
+			})}
 		</div>
 	);
 };
