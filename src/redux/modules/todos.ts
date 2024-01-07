@@ -1,34 +1,31 @@
+import { FILTER_ALL } from '@/data/CONSTANTS';
 import { RootState } from '@/redux/store';
-import { Todo } from '@/types/todos.types';
 import { createSlice } from '@reduxjs/toolkit';
 
 interface InitialState {
-	todos: Todo[];
+	activeFilter: string;
 }
 
 export const TODOS_SLICE = 'todos';
 const initialState: InitialState = {
-	todos: [],
+	activeFilter: FILTER_ALL,
 };
 
 export const todosSlice = createSlice({
 	name: TODOS_SLICE,
 	initialState,
 	reducers: {
-		setClinics: (state, action) => {
-			state.todos = action.payload;
-		},
-		addClinic: (state, action) => {
-			state.todos = [...state.todos, action.payload];
+		setActiveFilter: (state, action) => {
+			state.activeFilter = action.payload;
 		},
 	},
 });
 
-export const selectClinics = (
+export const selectTodos = (
 	state: RootState
 ): ReturnType<typeof todosReducer> => state[TODOS_SLICE];
 
 // Action creators are generated for each case reducer function
-export const { setClinics, addClinic } = todosSlice.actions;
+export const { setActiveFilter } = todosSlice.actions;
 
 export const todosReducer = todosSlice.reducer;

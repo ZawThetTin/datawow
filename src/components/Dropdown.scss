@@ -1,3 +1,28 @@
 .dropdown {
-	color: red;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	.dropdown-content {
+		display: none;
+	}
+
+	&.open {
+		.dropdown-content {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			display: block;
+			padding-inline: 22px;
+			padding-block: 17px;
+			background-color: white;
+			z-index: 10;
+			box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			min-width: 111px;
+		}
+	}
 }

@@ -5,7 +5,12 @@ export const AddTodo = () => {
 	const [createTodo] = useCreateTodoMutation();
 
 	const handleAddTodo = () => {
-		createTodo({ id: crypto.randomUUID(), title: 'hi', completed: false });
+		createTodo({
+			id: crypto.randomUUID(),
+			title:
+				'very long very long very long very long very long very long very long very long very long very long very long very long very long very long very long very long very long very long very long',
+			completed: false,
+		});
 	};
 
 	return (

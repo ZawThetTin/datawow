@@ -1,0 +1,27 @@
+.todo-filter-wrapper {
+	margin-left: auto;
+}
+
+.todo-filter-btn {
+	min-width: 110px;
+	background-color: white;
+	border-radius: 10px;
+	padding-block: 7px;
+	padding-inline: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.filter-option {
+	padding-block: 7px;
+	padding-inline: 9px;
+	border-radius: 8px;
+	width: 100%;
+	text-align: left;
+}
+
+.filter-option.active {
+	background-color: var(--theme-primary);
+	color: white;
+}

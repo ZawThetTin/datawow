@@ -1,6 +1,6 @@
 import { api } from '@/services/api';
 import { TODOS_ENDPOINT } from '@/services/endpoints';
-import { TODO_TAG } from '@/services/tags';
+import { TODOS_LIST_TAG } from '@/services/tags';
 import { Todo } from '@/types/todos.types';
 
 export const listTodosApi = api.injectEndpoints({
@@ -12,7 +12,7 @@ export const listTodosApi = api.injectEndpoints({
 					method: 'GET',
 				};
 			},
-			providesTags: [TODO_TAG],
+			providesTags: [TODOS_LIST_TAG],
 		}),
 	}),
 	overrideExisting: false,

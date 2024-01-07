@@ -1,0 +1,11 @@
+.todo-container {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding-inline: clamp(12px, 5vw, 101px);
+	padding-block: 61px;
+	background-color: var(--todo-container-bg);
+	border-radius: 20px;
+	width: min(100%, 720px);
+	min-height: 620px;
+}

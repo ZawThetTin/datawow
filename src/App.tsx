@@ -1,13 +1,11 @@
-import { AddTodo, Dropdown, ListTodos, Progress } from '@/components';
+import { Todo } from '@/pages';
+import './App.scss';
 
 function App() {
 	return (
-		<>
-			<Progress />
-			<ListTodos />
-			<Dropdown />
-			<AddTodo />
-		</>
+		<div className='app'>
+			<Todo />
+		</div>
 	);
 }
 

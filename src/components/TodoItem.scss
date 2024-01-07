@@ -1,0 +1,29 @@
+.todo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding-inline: 20px;
+	padding-block: 14px;
+	background-color: white;
+	border-radius: 9999px;
+
+	.checked {
+		text-decoration: line-through;
+		color: #a9a9a9;
+	}
+}
+
+.todo-title {
+	flex: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.delete-todo-btn {
+	color: var(--error);
+}
+
+.todo-actions-btn {
+	color: #9796a8;
+}

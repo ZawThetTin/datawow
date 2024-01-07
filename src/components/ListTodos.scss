@@ -1,3 +1,20 @@
 .todo-list {
-	color: red;
+	display: flex;
+	flex-direction: column;
+	gap: 17px;
+}
+
+.todo-list-header {
+	display: flex;
+
+	.dropdown.open .dropdown-content {
+		padding-block: 10px;
+		padding-inline: 6px;
+		gap: 1px;
+	}
+}
+
+.todo-list-title {
+	font-size: 24px;
+	font-weight: 500;
 }

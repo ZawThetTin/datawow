@@ -1,0 +1,8 @@
+.app {
+	width: 100dvw;
+	height: 100dvh;
+	display: flex;
+	background-color: var(--app-bg);
+	overflow: hidden;
+	padding-block: 42px;
+}
