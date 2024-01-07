@@ -7,5 +7,5 @@
 	background-color: var(--todo-container-bg);
 	border-radius: 20px;
 	width: min(100%, 720px);
-	min-height: 100%;
+	min-height: max(620px, 100%);
 }
