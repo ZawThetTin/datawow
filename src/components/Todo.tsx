@@ -1,7 +1,10 @@
 import { FC } from 'react';
 import './Todo.scss';
 import { Todo as TodoTypes } from '@/types/todos.types';
-import { useUpdateTodoMutation } from '@/services/modules/todos';
+import {
+	useDeleteTodoMutation,
+	useUpdateTodoMutation,
+} from '@/services/modules/todos';
 
 interface Props {
 	data: TodoTypes;
@@ -9,6 +12,7 @@ interface Props {
 
 export const Todo: FC<Props> = ({ data }) => {
 	const [updateTodo] = useUpdateTodoMutation();
+	const [deleteTodo] = useDeleteTodoMutation();
 
 	const handleEdit = (todo: TodoTypes) => {
 		const newTodo = {
@@ -18,11 +22,16 @@ export const Todo: FC<Props> = ({ data }) => {
 		updateTodo(newTodo);
 	};
 
+	const handleDelete = (id: string) => {
+		deleteTodo(id);
+	};
+
 	return (
 		<div className='todo'>
 			{data.id}
 			{data.title}
 			<button onClick={() => handleEdit(data)}>Edit</button>
+			<button onClick={() => handleDelete(data.id)}>Delete</button>
 		</div>
 	);
 };
