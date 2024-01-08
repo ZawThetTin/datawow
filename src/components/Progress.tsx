@@ -19,7 +19,9 @@ export const Progress = () => {
 
 	return (
 		<div className='progress-container'>
-			<label htmlFor='todo-progress'>Progress</label>
+			<label htmlFor='todo-progress' className='progress-title'>
+				Progress
+			</label>
 			<progress
 				id='todo-progress'
 				className='progress'
@@ -27,7 +29,9 @@ export const Progress = () => {
 				value={progress}>
 				{progress}
 			</progress>
-			<span>{completedCount?.toString()} completed</span>
+			<span className='completed-count'>
+				{completedCount?.toString()} completed
+			</span>
 		</div>
 	);
 };

@@ -2,4 +2,33 @@
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
+	background-color: var(--theme-secondary);
+	padding-block: 25px;
+	padding-inline: 19px;
+	margin-bottom: 33px;
+	border-radius: 20px;
+	color: white;
+
+	.progress-title {
+		font-size: 28px;
+	}
+
+	.progress {
+		border-radius: 7px;
+		width: 100%;
+		height: 8px;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+	}
+	.progress::-webkit-progress-bar {
+		background-color: #3b3b3b;
+		border-radius: 7px;
+	}
+	.progress::-webkit-progress-value {
+		background-color: white;
+		border-radius: 7px;
+	}
+
+	.completed-count {
+		color: #ebb9b8;
+	}
 }

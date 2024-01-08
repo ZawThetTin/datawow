@@ -33,7 +33,7 @@ export const TodoItem: FC<Props> = ({ data }) => {
 			completed: !checked,
 		};
 		await updateTodo(newTodo);
-		refetch();
+		await refetch();
 	};
 
 	const handleChangeTitle = (e: FormEvent<HTMLInputElement>) => {
